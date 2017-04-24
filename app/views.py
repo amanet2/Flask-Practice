@@ -11,9 +11,12 @@ def get_weather(wc: clients.DelegateClient):
     print(j_data)
     return j_data
 
-@app.route("/get_my_ip", methods=["GET"])
+@app.route("/get_my_ip")
 def get_my_ip():
-    return jsonify({'ip': request.remote_addr}), 200
+    ip_data = {'ip': request.remote_addr}
+    return render_template("get_my_ip.html",
+                           title='IP Lookup',
+                           ip_j=ip_data['ip']), 200
 
 @app.route('/')
 @app.route('/index')
