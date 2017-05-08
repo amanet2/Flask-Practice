@@ -2,14 +2,27 @@
 {% block content %}
 <h1>At A Glance</h1>
 {% for post in posts %}
-<div><p><b>{{ post.city }}</b></p></div>
-<div><p><b>Outlook: {{ post.overall }}</b></p></div>
-<div><p><b>High - Low: {{ post.high_low }}</b></p></div>
-<div><p><b>Current Temp: {{ post.temp }}</b></p></div>
-<div><p><b>Air Pressure: {{ post.pressure }}</b></p></div>
-<div><p><b>Humidity: {{ post.humidity }}</b></p></div>
-<div><p><b>Wind: {{ post.wind }}</b></p></div>
-<div><p><b>Visibility: {{ post.visibility }}</b></p></div>
+<table>
+    <caption>{{ post.city }}</caption>
+    <tr>
+        <th>Outlook</th>
+        <th>High / Low</th>
+        <th>cTemp</th>
+        <th>Air Pressure</th>
+        <th>Humidity</th>
+        <th>Wind</th>
+        <th>Visibility</th>
+    </tr>
+    <tr>
+        <td>{{ post.overall }}</td>
+        <td>{{ post.high_low }}</td>
+        <td>{{ post.temp }}</td>
+        <td>{{ post.pressure }}</td>
+        <td>{{ post.humidity }}</td>
+        <td>{{ post.wind }}</td>
+        <td>{{ post.visibility }}</td>
+    </tr>
+</table>
 <div><p><b>-</b></p></div>
 {% endfor %}
 {% endblock %}
