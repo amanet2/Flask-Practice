@@ -1,6 +1,8 @@
 api_key='9482fbe6126e13d94a463153c62cd857'
 city_map = [
-    ('Chicago','US')
+    ('Chicago','US'),
+    ('New York','US'),
+    ('Los Angeles','US')
 ]
 desired_reportings = [
     'weather',

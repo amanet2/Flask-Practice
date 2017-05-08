@@ -1,13 +1,9 @@
 <html>
-<head>
-    {% if title %}
-    <title>{{ title }} - WEATHER</title>
-    {% else %}
-    <title>Welcome to WEATHERZONE</title>
-    {% endif %}
-</head>
 <body>
-<div>Weatherzone: <a href="/index">Home</a></div>
+<div>Weatherzone:
+    <a href="/index">Home</a>
+    <a href="/get_my_ip">What's My Ip? </a>
+</div>
 <hr>
 {% block content %}{% endblock %}
 </body>

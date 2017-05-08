@@ -21,7 +21,6 @@ def get_my_ip():
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'nickname': 'Buddy'}  # fake user
     posts = [  # fake array of posts
 
     ]
@@ -29,5 +28,4 @@ def index():
         posts.append(stdout.show_weather_report(get_weather(city),config.desired_reportings))
     return render_template("index.html",
                            title='Home',
-                           user=user,
                            posts=posts)

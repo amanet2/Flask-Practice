@@ -3,8 +3,8 @@
 <h1>At A Glance</h1>
 {% for post in posts %}
 <table>
+    <caption>{{ post.city }}</caption>
     <tr>
-        <th>City</th>
         <th>Outlook</th>
         <th>High / Low</th>
         <th>cTemp</th>
@@ -14,7 +14,6 @@
         <th>Visibility</th>
     </tr>
     <tr>
-        <td>{{ post.city }}</td>
         <td>{{ post.overall }}</td>
         <td>{{ post.high_low }}</td>
         <td>{{ post.temp }}</td>
